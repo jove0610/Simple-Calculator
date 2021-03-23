@@ -1,0 +1,97 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(#189ccf), to(#1b501b));
+  background: linear-gradient(to right, #189ccf, #1b501b);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  min-width: 500px;
+  background: #f55959;
+  padding: 1em;
+  border: #e60909 5px solid;
+  border-radius: 10px;
+}
+
+.calculator-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: #3f3f3f;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 1.8rem;
+  margin: 0.4em 0 1.2em 0;
+}
+
+.calculator-screen p {
+  padding: 0.7em 0.7em;
+  margin: 0;
+}
+
+.calculator-keypad {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  gap: 0.9em;
+}
+
+.calculator-keypad-btn {
+  font-size: 1.3rem;
+  padding: 0.7em 0.2em;
+  cursor: pointer;
+  outline: none;
+}
+
+.calculator-keypad-btn:hover {
+  opacity: 0.7;
+}
+
+.calculator-keypad-btn_numbers {
+  background: #92d5f0;
+}
+
+.calculator-keypad-btn_operator {
+  background: #70b170;
+}
+
+.calculator-keypad-btn_clear {
+  background: #f3aaf3;
+}
+
+.calculator-keypad-btn_delete {
+  background: #f3aaf3;
+  visibility: hidden;
+}
+
+.calculator-keypad-btn_sign {
+  background: #f3aaf3;
+}
+
+.calculator-keypad-btn_equals {
+  background: #f3aaf3;
+  grid-column: span 2;
+}
+
+.numdot {
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */

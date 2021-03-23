@@ -1,0 +1,97 @@
+$body-bgColor: linear-gradient(to right, rgb(24, 156, 207), rgb(27, 80, 27));
+
+$calculator-bgColor: rgb(245, 89, 89);
+$calculator-borderColor: rgb(230, 9, 9);
+
+$screen-bgColor: #3f3f3f;
+$screen-fontColor: #fff;
+
+$numbers-btn-bgColor: rgb(146, 213, 240); 
+$operators-btn-bgColor: rgb(112, 177, 112); 
+$operation-btn-bgColor: rgb(243, 170, 243); 
+
+
+body {
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+   background: $body-bgColor;
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.calculator {
+   min-width: 500px;
+   background: $calculator-bgColor;
+   padding: 1em;
+   border: $calculator-borderColor 5px solid;
+   border-radius: 10px;
+
+   &-screen {
+      display: flex;
+      justify-content: flex-end;
+      background: $screen-bgColor;
+      color: $screen-fontColor;
+      border-radius: 7px;
+      font-size: 1.8rem;
+      margin: 0.4em 0 1.2em 0;
+
+      p {
+         padding: 0.7em 0.7em;
+         margin: 0;
+      }
+   }
+
+   &-keypad {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.9em;
+
+      &-btn {
+         font-size: 1.3rem;
+         padding: 0.7em 0.2em;
+         cursor: pointer;
+         outline: none;
+
+         &:hover {
+            opacity: 0.7;
+         }
+
+         &_numbers {
+            background: $numbers-btn-bgColor;
+         }
+
+         &_operator {
+            background: $operators-btn-bgColor;
+         }
+
+         &_clear {
+            background: $operation-btn-bgColor;
+         }
+
+         &_delete {
+            background: $operation-btn-bgColor;
+            visibility: hidden;
+
+         }
+
+         &_sign {
+            background: $operation-btn-bgColor;
+         }
+
+         &_equals {
+            background: $operation-btn-bgColor;
+            grid-column: span 2;
+         }
+      }
+   }
+}
+
+// remove this when dot button is finish
+.numdot {   
+   visibility: hidden;
+}
